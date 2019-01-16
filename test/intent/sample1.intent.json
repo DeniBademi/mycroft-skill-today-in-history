@@ -1,0 +1,7 @@
+{
+"utterance":"this day in history",
+"intent_type":"RandomEventIntent",
+"intent":{
+"randomEventKeyword":"this day in history"
+}
+}
