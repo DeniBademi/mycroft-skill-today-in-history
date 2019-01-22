@@ -34,6 +34,12 @@ class TodayHistorySkill(MycroftSkill):
         random_event_intent = IntentBuilder("RandomEventIntent"). \
             require("RandomEventKeyword").build()
         self.register_intent(random_event_intent, self.handle_random_event_intent)
+    
+    
+
+        random_event_intent = IntentBuilder("CompanyEventIntent"). \
+            require("CompanyEventKeyword").build()
+        self.register_intent(company_event_intent, self.handle_company_event_intent)
 
 
 
@@ -45,6 +51,9 @@ class TodayHistorySkill(MycroftSkill):
         events=output["Events"]
 
         self.speak_dialog("Today in history event {} occured".format(events[0]['text']))
+        
+    def handle_company_event_intent(self, message):
+        self.speak_dialog("# Never Settle")
 
     
 
