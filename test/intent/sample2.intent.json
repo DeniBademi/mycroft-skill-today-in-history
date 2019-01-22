@@ -1,0 +1,7 @@
+{
+"utterance":"what is MTX",
+"intent_type":"CompanyEventIntent",
+"intent":{
+"companyEventKeyword":"what is MTX"
+}
+}
