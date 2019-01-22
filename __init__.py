@@ -53,7 +53,7 @@ class TodayHistorySkill(MycroftSkill):
         self.speak_dialog("Today in history event {} occured".format(events[0]['text']))
         
     def handle_company_event_intent(self, message):
-        self.speak_dialog("# Never Settle")
+        self.speak_dialog("#tag Never Settle")
 
     
 
