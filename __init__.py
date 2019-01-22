@@ -37,7 +37,7 @@ class TodayHistorySkill(MycroftSkill):
     
     
 
-        random_event_intent = IntentBuilder("CompanyEventIntent"). \
+        company_event_intent = IntentBuilder("CompanyEventIntent"). \
             require("CompanyEventKeyword").build()
         self.register_intent(company_event_intent, self.handle_company_event_intent)
 
