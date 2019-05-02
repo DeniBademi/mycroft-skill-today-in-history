@@ -15,10 +15,14 @@
 # You should have received a copy of the GNU General Public License
 # along with Mycroft Core.  If not, see <http://www.gnu.org/licenses/>.
 import requests
+import json
+import urllib.request
+import ssl
 from adapt.intent import IntentBuilder
 
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
+
 
 __author__ = 'eward'
 
@@ -44,6 +48,7 @@ class TodayHistorySkill(MycroftSkill):
 
 
     def handle_random_event_intent(self, message):
+        requests.post('http://192.168.1.6/lamp1/on', data={"password":"sezam otvori se"})
         url =" http://history.muffinlabs.com/date"
         r=requests.get(url)
         json_output=r.json()
